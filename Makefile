@@ -1,4 +1,4 @@
-.PHONY: clean dependencies main test
+.PHONY: clean dependencies main test debug
 
 all: main
 
@@ -14,6 +14,9 @@ main: dependencies Binaries/main
 Binaries/main: main.c
 	gcc -o Binaries/main -I Binaries/include/ main.c Binaries/lib/libhello.a
 
-test: Binaries/main
+debug:
+	find .
+
+test: debug Binaries/main
 	./test.sh
 
