@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        triggers {
+            pollSCM 'H/2 * * * *'
+            upstream "pipeline-libhello-multibranch/main"
+        }
+
         stage('clean build') {
             steps {
                 sh 'make clean'
