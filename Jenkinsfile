@@ -1,11 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout Scm') {
-      steps {
-        git 'git@github.com:edward-cant/pipeline-helloprog.git'
-      }
-    }
+    // stage('Checkout Scm') {
+    //   steps {
+    //     git 'git@github.com:edward-cant/pipeline-helloprog.git'
+    //   }
+    // }
 
     stage('Install Dependencies') {
       steps {
