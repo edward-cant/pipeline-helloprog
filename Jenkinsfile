@@ -18,6 +18,12 @@ pipeline {
                 sh 'make all'
             }
         }
+
+        stage('test') {
+            steps {
+                sh './test.sh'
+            }
+        }
     }
     post {
         always {

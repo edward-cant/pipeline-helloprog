@@ -2,14 +2,14 @@
 
 function t1()
 {
-    echo "check if output contains 'hello'"
-    ./Binaries/main | grep -q "hello"
+    echo "check if output contains 'bonjour'"
+    ./Binaries/main | grep -q "bonjour"
 }
 
 function t2()
 {
-    echo "check if output contains 'world'"
-    ./Binaries/main | grep -q "world"
+    echo "check if output contains 'monde'"
+    ./Binaries/main | grep -q "monde"
 }
 
 ###
