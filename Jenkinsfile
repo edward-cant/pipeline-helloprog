@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('clean build') {
+            steps {
+                sh 'make clean'
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 copyArtifacts(projectName: 'pipeline-libhello')
