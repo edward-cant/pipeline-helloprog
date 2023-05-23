@@ -9,7 +9,8 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                copyArtifacts(projectName: 'pipeline-libhello', target: 'Binaries/dependencies')
+                copyArtifacts(projectName: 'pipeline-libhello', target: 'Binaries/dependencies/')
+                sh 'find .'
             }
         }
 
